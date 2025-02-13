@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        .car-gallery {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .car-gallery img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .thumbnails img {
+            width: 80px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .thumbnails img:hover {
+            transform: scale(1.1);
+        }
+        .car-info {
+            text-align: center;
+        }
+        .price span {
+            font-weight: bold;
+            color: #e60000;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            background: #ddd;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .specifications table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .specifications td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Car Details</h1>
+        </header>
+        <section class="car-gallery">
+            <img id="mainImage" src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" alt="Car Image">
+            <div class="thumbnails">
+                <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" onclick="changeImage('https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg')">
+                <img src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg" onclick="changeImage('https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg')">
+                <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" onclick="changeImage('https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg')">
+            </div>
+        </section>
+        <section class="car-info">
+            <h2>BMW M4 Coupe</h2>
+            <p class="price">Price: <span>$72,000</span></p>
+            <p>The BMW M4 Coupe is a high-performance sports car with a sleek design and powerful engine.</p>
+            <ul class="features">
+                <li>🏎️ 3.0L Twin-Turbo Inline-6</li>
+                <li>⚙️ 503 HP</li>
+                <li>⏱️ 0-60 mph in 3.8s</li>
+                <li>🔧 8-Speed Automatic</li>
+            </ul>
+        </section>
+        <section class="specifications">
+            <h3>Specifications</h3>
+            <table>
+                <tr><td>Engine</td><td>3.0L Twin-Turbo</td></tr>
+                <tr><td>Horsepower</td><td>503 HP</td></tr>
+                <tr><td>Transmission</td><td>8-Speed Auto</td></tr>
+                <tr><td>0-60 mph</td><td>3.8 seconds</td></tr>
+            </table>
+        </section>
+    </div>
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+</body>
+</html>
